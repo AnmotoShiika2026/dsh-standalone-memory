@@ -1,6 +1,7 @@
 *
 !/.gitignore
 !/RELEASE.md
+!/RELEASE-v0.11.2.md
 !/docs/
 !/locale/
 !/vendor/
