@@ -1,0 +1,83 @@
+{
+  "name": "dsh-standalone-memory",
+  "version": "0.11.2",
+  "description": "Project-scoped offline memory with source-checked quotations for DeepSeek Harness",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./client": "./client.js"
+  },
+  "files": [
+    "intent.cjs",
+    "archive-local.cjs",
+    "index.mjs",
+    "core.cjs",
+    "capture-maintenance.cjs",
+    "auto-policy.cjs",
+    "scoped-preference.cjs",
+    "natural-capture.cjs",
+    "context-facts.cjs",
+    "value-frame.cjs",
+    "auto-host.mjs",
+    "native-user.mjs",
+    "future-choice.cjs",
+    "history.mjs",
+    "archive-host.mjs",
+    "import-host.mjs",
+    "console-host.mjs",
+    "grouped-console.mjs",
+    "profile-directory.mjs",
+    "session-isolation.cjs",
+    "console-transport.mjs",
+    "import-policy.mjs",
+    "archive-scope.mjs",
+    "archive-store.cjs",
+    "semantic-host.mjs",
+    "semantic.cjs",
+    "semantic-static.cjs",
+    "semantic-assets",
+    "cordis.patch.yml",
+    "icon.svg",
+    "docs",
+    "locale",
+    "README.md",
+    "UPGRADE-CONSENT.md",
+    "bound-query.mjs",
+    "forget-host.mjs",
+    "curated-forget.cjs",
+    "literal.cjs",
+    "profile-assets.cjs",
+    "client.js",
+    "settings-host.mjs",
+    "vendor"
+  ],
+  "icon": "icon.svg",
+  "engines": {
+    "node": ">=22.13.0",
+    "dsh": ">=0.2.2-0 <0.3.0"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "offline",
+    "memory"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  }
+}
